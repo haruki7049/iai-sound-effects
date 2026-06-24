@@ -14,9 +14,9 @@ const T = f64;
 pub fn gen(allocator: std.mem.Allocator) !lightmix.Wave(T) {
     const LENGTH: usize = SAMPLE_RATE / 2;
 
-    const pop_first = try gen_pop(allocator, Scale.gen(.{ .code = .g, .octave = 4 }));
+    const pop_first = try gen_pop(allocator, Scale.gen(.{ .code = .g, .octave = 3 }));
     defer pop_first.deinit();
-    const pop_second = try gen_pop(allocator, Scale.gen(.{ .code = .b, .octave = 4 }));
+    const pop_second = try gen_pop(allocator, Scale.gen(.{ .code = .b, .octave = 3 }));
     defer pop_second.deinit();
 
     var composer = lightmix.Composer(T){ .allocator = allocator, .info = &.{}, .channels = CHANNELS, .sample_rate = SAMPLE_RATE };

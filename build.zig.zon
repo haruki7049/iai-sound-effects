@@ -1,0 +1,19 @@
+.{
+    .name = .iai_sound_effects,
+    .version = "0.0.0",
+    .fingerprint = 0x4c0be8c85d513d90,
+    .minimum_zig_version = "0.15.2",
+
+    .dependencies = .{
+        .lightmix = .{
+            .url = "https://github.com/haruki7049/lightmix/archive/refs/tags/0.20.4.tar.gz",
+            .hash = "lightmix-0.20.4-SpCovMKYAgBXJzt18gLobSJnlCM-6H3YxgNZq_49s4Vy",
+        },
+    },
+
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+    },
+}

@@ -8,6 +8,7 @@ pub fn build(b: *std.Build) anyerror!void {
     try build_mod(b, target, optimize, b.path("src/accept.zig"), "accept.wav");
     try build_mod(b, target, optimize, b.path("src/deny.zig"), "deny.wav");
     try build_mod(b, target, optimize, b.path("src/success.zig"), "success.wav");
+    try build_mod(b, target, optimize, b.path("src/cut.zig"), "cut.wav");
 }
 
 fn build_mod(
